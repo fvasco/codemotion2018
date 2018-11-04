@@ -5,7 +5,7 @@ import java.util.Objects;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-public class Company {
+public final class Company {
 
     @Nonnull
     private final String name;
@@ -15,7 +15,7 @@ public class Company {
         return IntStream.range(1_000, 50_001);
     }
 
-    public Company(@Nonnull String name) {
+    public Company(@Nonnull final String name) {
         Objects.requireNonNull(name);
         if (name.isEmpty()) {
             throw new IllegalArgumentException(("Empty name"));

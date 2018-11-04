@@ -13,7 +13,7 @@ public final class Train {
     @Nonnull
     private final Ton weight;
 
-    Train(final int code, final Type type, final Ton weight) {
+    Train(final int code, @Nonnull final Type type, @Nonnull final Ton weight) {
         Objects.requireNonNull(type);
         Objects.requireNonNull(weight);
         this.code = code;

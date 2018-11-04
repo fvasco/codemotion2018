@@ -10,6 +10,7 @@ fun makeTrain(company: Company, trainCode: Int): Train {
         seed += seed xor i
     }
     seed = seed.absoluteValue
+
     val type = typeValues[seed % typeValues.size]
     val weight = when (type) {
         Type.FAST -> 150.ton

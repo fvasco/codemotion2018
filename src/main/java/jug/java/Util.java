@@ -1,6 +1,7 @@
 package jug.java;
 
 import javax.annotation.Nonnull;
+import java.util.Objects;
 
 public final class Util {
 
@@ -11,6 +12,7 @@ public final class Util {
 
     @Nonnull
     public static Train makeTrain(@Nonnull final Company company, @Nonnull final int trainCode) {
+        Objects.requireNonNull(company);
         var seed = company.getName().hashCode();
         for (var i = 0; i < trainCode; i++) {
             seed += seed ^ i;
