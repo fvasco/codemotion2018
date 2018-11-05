@@ -11,7 +11,7 @@ public final class Company {
     private final String name;
 
     @Nonnull
-    public static IntStream getCodes() {
+    private static IntStream getCodes() {
         return IntStream.range(1_000, 50_001);
     }
 
