@@ -1,6 +1,6 @@
 package jug.kotlin
 
-inline class Ton(val mass: Int) {
+data class Ton(val mass: Int) { // experimental inline class support
     override fun toString(): String = "$mass ton"
 }
 
